@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="shortcut icon" href="../../eduleb/eduleb/assets/img/logo.png">
+<title>ຫົວຂໍ້ທັ້ງໝົດ</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<!-- Latest Bootstrap min CSS -->
+	<link rel="stylesheet" href="../../eduleb/eduleb/assets/fonts/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../eduleb/eduleb/assets/css/jquery-simple-mobilemenu.css">						
+	<link rel="stylesheet" href="../../eduleb/eduleb/assets/css/style.css">	
+  <style>
+
+    .container {
+      width: 100%;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      border-radius: 16px;
+      padding: 48px 40px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+
+    .card:nth-child(1) { background-color: #f9a8ba; }
+    .card:nth-child(2) { background-color: #faf0a0; }
+    .card:nth-child(3) { background-color: #f0e8e0; }
+    .card:nth-child(4) { background-color: #c8e8d8; }
+
+    .card h2 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 2rem;
+      color: #1a1a2e;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #3a3a4a;
+      font-weight: 400;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 12px;
+      background-color: #1e1e2e;
+      color: #ffffff;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      padding: 14px 36px;
+      border-radius: 50px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .card a:hover {
+      background-color: #111120;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- START NAVBAR -->  
+		<div id="navigation" class="navbar-light bg-faded site-navigation">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-2 align-self-center">
+						<div class="site-logo">
+							<a href="../eduleb/eduleb/index.html"><img src="../eduleb/eduleb/assets/img/logo.png" alt=""></a>          				
+						</div>
+					</div><!--- END Col -->
+					
+					<div class="col-lg-10 d-flex align-items-center">
+						<nav id="main-menu">
+							<ul>
+								<li><a href="../eduleb/eduleb/index.html" style="font-size: 20px;">ໜ້າຫຼັກ</a></li>
+								<li><a href="../Edukate-1.0.0/index.html" style="font-size: 20px;">ກຽວກັບຂ້ອຍ</a></li>				  				  
+								<li class="menu-item-has-children"><a href="#" style="font-size: 20px;">ບົດຮຽນທີ່ແນະນຳ</a>
+									<ul>										
+										<li><a href="#">Keyboard</a></li>
+										<li><a href="#">Short cut</a></li>
+										<li><a href="#">Desktop</a></li>
+										<li><a href="#">Setting</a></li>
+									</ul>
+								</li>							
+								<li class="menu-item-has-children"><a href="course.html" style="font-size: 20px;">ຫົວຂໍ້ຕ່າງໆ</a>
+									<ul>										
+										<li><a href="homebsc.html" style="font-size: 20px;">Home</a></li>
+										<li><a href="#lpg" style="font-size: 20px;">ພາສາ ຂຽນໂປແກຣມ</a></li>
+										<li><a href="#office" style="font-size: 20px;">ໂປແກຣມ office</a></li>
+										<li><a href="#com" style="font-size: 20px;">ຄວາມຄິດເຫັນຈາກຄົນອື່ນໆ</a></li>
+									</ul>
+								</li>							
+								<li><a href="../../learner-1.0.0/learner-1.0.0/index.html" style="font-size: 20px;">ຕິດຕໍ່</a>
+									<!-- <ul>										
+										<li><a href="blog.html">ຂ້ອຍ</a></li>
+										<li><a href="blog_single.html">ວິທະຍາໄລ</a></li>
+									</ul> -->
+								</li>							  
+								<!-- <li><a href="contact.html"style="font-size: 20px;"></a></li> -->
+								<li><a href="../../restoran-1.0.0/restoran-1.0.0/index.html" style="font-size: 20px;">ກຽວກັບວິທະຍາໄລ</a></li>
+							</ul>
+						</nav>
+					</div><!--- END Col -->
+					
+					<!-- <div class="col-20 d-none d-xl-block text-end align-self-center">
+						<a href="#" class="header-btn">Sign In</a>
+						<a href="contact.html" class="btn_one">Sign Up</a>
+					</div> -->
+					<!--- END Col -->
+					
+					<ul class="mobile_menu">						
+						<li><a href="#">Home</a>
+							<ul class="sub-menu">										
+								<li><a href="index.html">Home 01</a></li>
+								<li><a href="index2.html">Home 02</a></li>						
+							</ul>
+						</li>	
+						<li><a href="about.html">About</a></li>						
+						<li><a href="#">Course</a>
+							<ul class="sub-menu">										
+								<li><a href="course.html">Course</a></li>
+								<li><a href="course_details.html">Course Deails</a></li>									
+							</ul>
+						</li>
+						<li><a href="#">Pages</a>
+							<ul class="sub-menu">									
+								<li><a href="instructor.html">Instructor</a></li>
+								<li><a href="ins_details.html">Instructor Details</a></li>
+								<li><a href="pricing.html">Pricing Plan</a></li>
+								<li><a href="faq.html">Faq Page</a></li>			
+								<li><a href="404.html">404</a></li>							
+							</ul>
+						</li>			
+						<li><a href="blog.html">Blog</a>
+							<ul class="sub-menu">										
+								<li><a href="blog.html">Blog</a></li>
+								<li><a href="blog_single.html">Blog Details</a></li>
+							</ul>
+						</li>						
+						<li><a href="contact.html">Contact</a></li>
+					</ul>			
+				</div><!--- END ROW -->
+			</div><!--- END CONTAINER -->
+		</div>
+		<!-- END NAVBAR -->
+
+  <div class="container mt-5">
+  <div class="grid">
+
+    <div class="card">
+      <h2>ຄວາມຮູ້ພື້ນຖານ</h2>
+      <p>ຄວາມຮູ້ພື້ນຖານຕ່າງໆໃນການເຮີມຮຽນ IT ໃນວິທະຍາໄລ BCT</p>
+      <a href="https://www.php.net/docs.php" target="_blank">ຄວາມຮູ້ພື້ນຖານ</a>
+    </div>
+
+    <div class="card">
+      <h2>jQuery</h2>
+      <p>A JS library for developing web pages</p>
+      <a href="https://api.jquery.com/" target="_blank">Learn jQuery</a>
+    </div>
+
+    <div class="card">
+      <h2>Java</h2>
+      <p>A programming language</p>
+      <a href="https://docs.oracle.com/en/java/" target="_blank">Learn Java</a>
+    </div>
+
+    <div class="card">
+      <h2>C++</h2>
+      <p>A programming language</p>
+      <a href="https://cppreference.com" target="_blank">Learn C++</a>
+    </div>
+
+  </div>
+  </div>
+</body>
+</html>

@@ -1,273 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
-  <link rel="shortcut icon" href="../../eduleb/eduleb/assets/img/logo.png">
-<title>ຫົວຂໍ້ທັ້ງໝົດ</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<!-- Latest Bootstrap min CSS -->
-	<link rel="stylesheet" href="../../eduleb/eduleb/assets/fonts/themify-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../../eduleb/eduleb/assets/css/jquery-simple-mobilemenu.css">						
-	<link rel="stylesheet" href="../../eduleb/eduleb/assets/css/style.css">	
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Tags</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    .container {
-      width: 100%;
-    }
+  body {
+    background: #1e2230;
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    padding: 16px;
+  }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
+  .grid-wrap {
+    display: grid;
+	margin-left: 80px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
 
-    .card {
-      border-radius: 16px;
-      padding: 48px 40px 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 16px;
-    }
+  .tag-card {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 32px 16px; */
+	width: 200px;
+	height: 100px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    user-select: none;
+    text-align: center;
+  }
 
-    .card:nth-child(1) { background-color: #f9a8ba; }
-    .card:nth-child(2) { background-color: #faf0a0; }
-    .card:nth-child(3) { background-color: #f0e8e0; }
-    .card:nth-child(4) { background-color: #c8e8d8; }
+  .tag-card:hover { transform: scale(1.05); opacity: 0.88; }
+  .tag-card:active { transform: scale(0.97); }
 
-    .card h2 {
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 2rem;
-      color: #1a1a2e;
-    }
+  .beige  { background: #d8d4cc; color: #3a3730; }
+  .teal   { background: #8ecfc4; color: #1a4a44; }
+  .cyan   { background: #7ec8d0; color: #164a50; }
+  .pink   { background: #f4a8b4; color: #6b1f2e; }
+  .yellow { background: #e8e080; color: #4a4410; }
+  .rose   { background: #c8b8b0; color: #3a2820; }
+  .mint   { background: #a8d8c8; color: #1a4438; }
+  .sage   { background: #b8ccc0; color: #1e3828; }
 
-    .card p {
-      font-size: 0.95rem;
-      color: #3a3a4a;
-      font-weight: 400;
-    }
-
-    .card a {
-      display: inline-block;
-      margin-top: 12px;
-      background-color: #1e1e2e;
-      color: #ffffff;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      padding: 14px 36px;
-      border-radius: 50px;
-      transition: background 0.2s, transform 0.15s;
-    }
-
-    .card a:hover {
-      background-color: #111120;
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 600px) {
-      .grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  @media (max-width: 600px) {
+    .grid-wrap { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
 </head>
 <body>
 
-  <!-- START NAVBAR -->  
-		<div id="navigation" class="navbar-light bg-faded site-navigation">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-2 align-self-center">
-						<div class="site-logo">
-							<a href="../eduleb/eduleb/index.html"><img src="../eduleb/eduleb/assets/img/logo.png" alt=""></a>          				
-						</div>
-					</div><!--- END Col -->
-					
-					<div class="col-lg-10 d-flex align-items-center">
-						<nav id="main-menu">
-							<ul>
-								<li><a href="../eduleb/eduleb/index.html" style="font-size: 20px;">ໜ້າຫຼັກ</a></li>
-								<li><a href="../Edukate-1.0.0/index.html" style="font-size: 20px;">ກຽວກັບຂ້ອຍ</a></li>				  				  
-								<li class="menu-item-has-children"><a href="#" style="font-size: 20px;">ບົດຮຽນທີ່ແນະນຳ</a>
-									<ul>										
-										<li><a href="#">Keyboard</a></li>
-										<li><a href="#">Short cut</a></li>
-										<li><a href="#">Desktop</a></li>
-										<li><a href="#">Setting</a></li>
-									</ul>
-								</li>							
-								<li class="menu-item-has-children"><a href="course.html" style="font-size: 20px;">ຫົວຂໍ້ຕ່າງໆ</a>
-									<ul>										
-										<li><a href="homebsc.html" style="font-size: 20px;">Home</a></li>
-										<li><a href="#lpg" style="font-size: 20px;">ພາສາ ຂຽນໂປແກຣມ</a></li>
-										<li><a href="#office" style="font-size: 20px;">ໂປແກຣມ office</a></li>
-										<li><a href="#com" style="font-size: 20px;">ຄວາມຄິດເຫັນຈາກຄົນອື່ນໆ</a></li>
-									</ul>
-								</li>							
-								<li><a href="../../learner-1.0.0/learner-1.0.0/index.html" style="font-size: 20px;">ຕິດຕໍ່</a>
-									<!-- <ul>										
-										<li><a href="blog.html">ຂ້ອຍ</a></li>
-										<li><a href="blog_single.html">ວິທະຍາໄລ</a></li>
-									</ul> -->
-								</li>							  
-								<!-- <li><a href="contact.html"style="font-size: 20px;"></a></li> -->
-								<li><a href="../../restoran-1.0.0/restoran-1.0.0/index.html" style="font-size: 20px;">ກຽວກັບວິທະຍາໄລ</a></li>
-							</ul>
-						</nav>
-					</div><!--- END Col -->
-					
-					<!-- <div class="col-20 d-none d-xl-block text-end align-self-center">
-						<a href="#" class="header-btn">Sign In</a>
-						<a href="contact.html" class="btn_one">Sign Up</a>
-					</div> -->
-					<!--- END Col -->
-					
-					<ul class="mobile_menu">						
-						<li><a href="#">Home</a>
-							<ul class="sub-menu">										
-								<li><a href="index.html">Home 01</a></li>
-								<li><a href="index2.html">Home 02</a></li>						
-							</ul>
-						</li>	
-						<li><a href="about.html">About</a></li>						
-						<li><a href="#">Course</a>
-							<ul class="sub-menu">										
-								<li><a href="course.html">Course</a></li>
-								<li><a href="course_details.html">Course Deails</a></li>									
-							</ul>
-						</li>
-						<li><a href="#">Pages</a>
-							<ul class="sub-menu">									
-								<li><a href="instructor.html">Instructor</a></li>
-								<li><a href="ins_details.html">Instructor Details</a></li>
-								<li><a href="pricing.html">Pricing Plan</a></li>
-								<li><a href="faq.html">Faq Page</a></li>			
-								<li><a href="404.html">404</a></li>							
-							</ul>
-						</li>			
-						<li><a href="blog.html">Blog</a>
-							<ul class="sub-menu">										
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="blog_single.html">Blog Details</a></li>
-							</ul>
-						</li>						
-						<li><a href="contact.html">Contact</a></li>
-					</ul>			
-				</div><!--- END ROW -->
-			</div><!--- END CONTAINER -->
-		</div>
-		<!-- END NAVBAR -->
+<div class="grid-wrap">
+  <div class="tag-card beige">R</div>
+  <div class="tag-card teal">Kotlin</div>
+  <div class="tag-card cyan">Node.js</div>
+  <div class="tag-card pink">React</div>
 
-  <div class="container mt-5">
-  <div class="grid">
+  <div class="tag-card yellow">JSON</div>
+  <div class="tag-card rose">Vue</div>
+  <div class="tag-card mint">MySQL</div>
+  <div class="tag-card teal">XML</div>
 
-    <div class="card">
-      <h2>ຄວາມຮູ້ພື້ນຖານ</h2>
-      <p>ຄວາມຮູ້ພື້ນຖານຕ່າງໆໃນການເຮີມຮຽນ IT ໃນວິທະຍາໄລ BCT</p>
-      <a href="#" target="_blank">ຄວາມຮູ້ພື້ນຖານ</a>
-    </div>
+  <div class="tag-card pink">Sass</div>
+  <div class="tag-card yellow">Icons</div>
+  <div class="tag-card beige">RWD</div>
+  <div class="tag-card sage">Graphics</div>
 
-    <div class="card">
-      <h2>Microsoft Office</h2>
-      <p>ຮຽນການໃຊ້ program ຈາກ microsoft office</p>
-      <a href="#" target="_blank">MS Office</a>
-    </div>
+  <div class="tag-card cyan">SVG</div>
+  <div class="tag-card pink">Canvas</div>
+  <div class="tag-card yellow">Raspberry Pi</div>
+  <div class="tag-card rose">Cyber Security</div>
 
-    <div class="card">
-      <h2>Edit</h2>
-      <p>ໂປຮແກຮມຕັດຕໍ່ຕ່າງໆເຊັ້ນ: Photoshop ແລະ Vegas Pro</p>
-      <a href="https://docs.oracle.com/en/java/" target="_blank">ຮຽນການຕິດຕໍ່ພາບ ແລະ video</a>
-    </div>
-
-    <div class="card">
-      <h2>Programing language</h2>
-      <p>ພາສາ ໂປຣແກຣມຕ່າງໆເຊັ້ນ: C , C++ , HTML , Java Script ແລະ ອື່ນໆ</p>
-      <a href="https://cppreference.com" target="_blank">Programming language</a>
-    </div>
-
-  </div>
-  </div>
-
-  <!-- START FOOTER -->
-		<div class="footer section-padding mt-5">
-			<div class="container">				
-				<div class="row">						
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="single_footer">
-							<a href="../eduleb/eduleb/index.html"><img src="../eduleb/eduleb/assets/img/logo.png" alt="" style="width: 300px;"></a>         
-							<!-- <p>ເວັບນີ້ສ້າງຂື້ນມາເພື່ອແນະນຳການຮຽນການສອນ ແລະ ບອກເລົ່າປະສົບການຕ່າງໆ ຕອນ ປີ 1 ຢູ່ BCT (25-26) </p> -->
-						</div>			
-					</div><!--- END COL -->						
-					<div class="col-lg-2 col-sm-6 col-xs-12">
-						<div class="single_footer">
-							<h4>About</h4>
-							<ul>
-								<li><a href="../../Edukate-1.0.0/index.html">About me</a></li>
-								<li><a href="../../restoran-1.0.0/restoran-1.0.0/index.html">About college BCT</a></li>
-								<li><a href="../../learner-1.0.0/learner-1.0.0/index.html">Contact</a></li>
-							</ul>
-						</div>
-					</div><!--- END COL -->	
-					<div class="col-lg-2 col-sm-6 col-xs-12">
-						<div class="single_footer">
-							<h4>Popular subject</h4>
-							<ul>
-								<li><a href="#">Vs Code</a></li>
-								<li><a href="#">Short cut</a></li>
-								<li><a href="#">Information website</a></li>
-								<li><a href="#">Program</a></li>
-								<!-- <li><a href="#">Code Inspection</a></li>						 -->
-								<!-- <li><a href="#">Digital Marketing</a></li>						 -->
-							</ul>
-						</div>
-					</div><!--- END COL -->
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="single_footer">
-							<h4>Contact Me</h4>
-							<!-- <div class="sf_contact">
-								<span class="ti-map"></span>
-								<p>2570 Quadra Street Victoria Road, New York, Canada</p>
-							</div> -->
-							<div class="sf_contact">
-								<span class="ti-mobile"></span>
-								<p>+856 20 99 651 572</p>
-							</div>
-							<div class="sf_contact">
-								<span class="ti-mobile"></span>
-								<p><a href="https://wa.me/8562099651572" target="_blank">Whatsapp</a></p>
-							</div>
-							<div class="sf_contact">
-								<span class="ti-email"></span>
-								<a href="https://mail.google.com/mail/?view=cm&fs=1&to=masomiimiisoba@gmail.com" target="_blank">My Email</a>
-							</div>
-						</div>
-					</div><!--- END COL -->						
-					<div class="col-lg-2 col-sm-6 col-xs-12">
-						<div class="single_footer">
-							<h4>Contact BCT</h4>
-							<div class="sf_contact">
-								<span class="ti-map"></span>
-								<p>ບ້ານ ໂນນສະຫວ່າງ ເມືອງ ວຽງຄຳ ແຂວງ ວຽງຈັນ</p>
-							</div>
-							<!-- <div class="sf_contact">
-								<span class="ti-mobile"></span>
-								<p>Phone</p>
-							</div> -->
-							<div class="sf_contact">
-								<span class="ti-mobile"></span>
-								<p><a href="https://wa.me/8562091215399" target="_blank">Whatsapp</a></p>
-							</div>
-						</div>
-					</div><!--- END COL -->	
-				</div><!--- END ROW -->					
-			</div><!--- END CONTAINER -->
-		</div>
-		<!-- END FOOTER -->
+  <div class="tag-card teal">Python</div>
+  <div class="tag-card beige">TypeScript</div>
+  <div class="tag-card yellow">Docker</div>
+  <div class="tag-card mint">PostgreSQL</div>
+</div>
 
 </body>
 </html>

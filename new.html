@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learn to Code</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ── TOP DARK SECTION ── */
+    .top {
+      background: #282a35;
+      text-align: center;
+      padding: 64px 24px 0;
+    }
+
+    .top h1 {
+      color: #fff;
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .top .tagline {
+      color: #f1d261;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .search-row {
+      display: flex;
+      max-width: 500px;
+      margin: 0 auto 18px;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 2px solid #fff;
+    }
+
+    .search-row input {
+      flex: 1;
+      border: none;
+      padding: 13px 20px;
+      font-size: 15px;
+      color: #555;
+      outline: none;
+      background: #fff;
+    }
+
+    .search-row button {
+      background: #04aa6d;
+      border: none;
+      padding: 13px 22px;
+      color: #fff;
+      font-size: 17px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-row button svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+
+    .hint-link {
+      display: inline-block;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: underline;
+      margin-bottom: 50px;
+    }
+
+    /* ── WAVE DIVIDER ── */
+    .wave-wrap {
+      background: #282a35;
+      line-height: 0;
+    }
+
+    .wave-wrap svg {
+      display: block;
+      width: 100%;
+    }
+
+    /* ── BOTTOM LIGHT SECTION ── */
+    .bottom {
+      background: #d5e8d0;
+      padding: 44px 40px 52px;
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .bottom h2 {
+      font-size: 80px;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    .code-card {
+      flex: 1;
+      min-width: 260px;
+      background: #ebebeb;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .code-card-header {
+      background: #dedede;
+      padding: 11px 16px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .code-card-body {
+      background: #fff;
+      margin: 8px;
+      border-radius: 3px;
+      border-left: 4px solid #04aa6d;
+      padding: 14px 16px;
+    }
+
+    .code-card-body pre {
+      font-family: 'Courier New', monospace;
+      font-size: 13.5px;
+      line-height: 1.75;
+      color: #905;
+    }
+
+    .code-card-body pre .blue {
+      color: #0059a6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP DARK SECTION -->
+  <div class="top">
+    <h1>Learn to Code</h1>
+    <p class="tagline">With the world's largest web developer site.</p>
+
+    <div class="search-row">
+      <input type="text" placeholder="Search our tutorials, e.g. HTML" />
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"
+            stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+            fill="none"/>
+        </svg>
+      </button>
+    </div>
+
+    <a class="hint-link" href="#">Not Sure Where To Begin?</a>
+  </div>
+
+  <!-- WAVE DIVIDER -->
+  <div class="wave-wrap">
+    <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,60 C200,110 380,10 600,55 C820,100 1020,15 1200,55 C1310,80 1390,40 1440,30 L1440,100 L0,100 Z"
+        fill="#d5e8d0"/>
+    </svg>
+  </div>
+
+  <!-- BOTTOM LIGHT SECTION -->
+  <div class="bottom">
+    <h2>HTML</h2>
+    <div class="code-card">
+      <div class="code-card-header">HTML Example:</div>
+      <div class="code-card-body">
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;<span class="blue">Page Title</span>&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;<span class="blue">My First Heading</span>&lt;/h1&gt;
+&lt;p&gt;<span class="blue">My first paragraph.</span>&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

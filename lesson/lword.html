@@ -1,0 +1,599 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="../../eduleb/eduleb/assets/img/logo.png">
+<title>Microsoft Word</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<!-- Latest Bootstrap min CSS -->
+	<link rel="stylesheet" href="../../eduleb/eduleb/assets/fonts/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../eduleb/eduleb/assets/css/jquery-simple-mobilemenu.css">						
+	<link rel="stylesheet" href="../../eduleb/eduleb/assets/css/style.css">	
+<style>
+	p{
+		font-size: 20px !important;
+	}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+/* sidebar */
+.sidebar{
+    width:260px;
+    height:calc(100vh - 70px); /* ลบความสูง navbar */
+    position:fixed;
+    top:150px; /* ความสูง navbar */
+    left:0;
+    background:#f1f1f1;
+    overflow-y:auto; /* ทำให้ sidebar scroll ได้ */
+    padding:20px;
+    border-right:1px solid #ddd;
+    z-index: 1;
+}
+
+.sidebar h3{
+    margin-bottom:15px;
+}
+
+.sidebar a,
+.dropdown-btn{
+    display:block;
+    width:100%;
+    text-decoration:none;
+    color:black;
+    padding:10px;
+    border:none;
+    background:none;
+    text-align:left;
+    border-radius:5px;
+    margin-bottom:5px;
+    transition:0.3s;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.sidebar a:hover,
+.dropdown-btn:hover{
+    background:#04AA6D;
+    color:white;
+}
+
+/* dropdown menu */
+.dropdown-content{
+    display:none;
+    padding-left:15px;
+}
+
+.dropdown-content a{
+    font-size:15px;
+    background:#e9e9e9;
+}
+
+.arrow{
+    float:right;
+    transition: 0.3s;
+}
+
+.rotate{
+    transform:rotate(180deg)
+}
+.main{
+    margin-left:260px;
+    padding:30px;
+    margin-top: 150px;
+}
+
+.text-center{
+    text-align:center;
+    font-size:30px;
+    margin-top:100px;
+}
+.nav-btn{
+    display:flex;
+    justify-content:space-between;
+    margin:20px 0;
+}
+
+.nav-btn a{
+    text-decoration:none;
+    background:#04AA6D;
+    color:white;
+    padding:12px 22px;
+    border-radius:5px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.nav-btn a:hover{
+    background:#038a59;
+}
+.img{
+    height: 300px;
+}
+hr{
+    height: 3px;
+    background-color: red;
+}
+li{
+    font-size: 20px;
+}
+#navigation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white; /* กันโปร่งใส */
+}
+.footer{
+    position: relative;
+    z-index: 999;
+
+}
+.sb-item { margin-bottom: 4px; }
+.sb-row { display:flex; align-items:center; width:100%; border:none; background:none; padding:0; cursor:pointer; border-radius:5px; transition:.2s; overflow:hidden; }
+.sb-row:hover { background:#04AA6D; }
+.sb-row:hover .sb-label, .sb-row:hover .sb-arrow { color: white; }
+.sb-label { flex:1; text-align:left; padding:10px; font-size:15px; color:#222; text-decoration:none; display:block; }
+.sb-arrow { padding:10px; font-size:12px; color:#555; transition:.3s; user-select:none; }
+.sb-arrow.open { transform:rotate(180deg); }
+.sb-sub { display:none; padding-left:12px; margin-top:2px; }
+.sb-sub.show { display:block; }
+.sb-sub a { display:block; padding:8px 10px; font-size:14px; color:#333; text-decoration:none; border-radius:4px; background:#e9e9e9; margin-bottom:3px; }
+.sb-sub a:hover { background:#04AA6D; color:white; }
+</style>
+</head>
+<body>
+    
+    <!-- START NAVBAR -->  
+		<div id="navigation" class="navbar-light bg-faded site-navigation">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-2 align-self-center">
+						<div class="site-logo">
+							<a href="../eduleb/eduleb/index.html"><img src="../eduleb/eduleb/assets/img/logo.png" alt=""></a>          				
+						</div>
+					</div><!--- END Col -->
+					
+					<div class="col-lg-10 d-flex align-items-center">
+						<nav id="main-menu">
+							<ul>
+								<li><a href="../eduleb/eduleb/index.html" style="font-size: 20px;">ໜ້າຫຼັກ</a></li>
+								<li><a href="../Edukate-1.0.0/index.html" style="font-size: 20px;">ກຽວກັບຂ້ອຍ</a></li>				  				  
+								<li><a href="#shout" style="font-size: 20px;">ແນະນຳ</a></li>					
+								<li class="menu-item-has-children"><a href="../../alllsubject.html" style="font-size: 20px;">ຫົວຂໍ້ຕ່າງໆ</a>
+									<ul>										
+										<li><a href="#" style="font-size: 20px;">ພື້ນຖານຄອມພີວເຕີ</a></li>
+										<li><a href="#" style="font-size: 20px;">Microsoft Office</a></li>
+										<li><a href="#" style="font-size: 20px;">ຕັດຕໍ່ຮູບ ແລະ ວິດີໂອ</a></li>
+										<li><a href="#" style="font-size: 20px;">ພາສາໂປຣແກຣມຕ່າງໆ</a></li>
+									</ul>
+								</li>							
+								<li><a href="../../learner-1.0.0/learner-1.0.0/index.html" style="font-size: 20px;">ຕິດຕໍ່</a>
+									<!-- <ul>										
+										<li><a href="blog.html">ຂ້ອຍ</a></li>
+										<li><a href="blog_single.html">ວິທະຍາໄລ</a></li>
+									</ul> -->
+								</li>							  
+								<!-- <li><a href="contact.html"style="font-size: 20px;"></a></li> -->
+								<li><a href="../../restoran-1.0.0/restoran-1.0.0/index.html" style="font-size: 20px;">ກຽວກັບວິທະຍາໄລ</a></li>
+							</ul>
+						</nav>
+					</div><!--- END Col -->
+					
+					<!-- <div class="col-20 d-none d-xl-block text-end align-self-center">
+						<a href="#" class="header-btn">Sign In</a>
+						<a href="contact.html" class="btn_one">Sign Up</a>
+					</div> -->
+					<!--- END Col -->
+					
+					<ul class="mobile_menu">						
+						<li><a href="#">Home</a>
+							<ul class="sub-menu">										
+								<li><a href="index.html">Home 01</a></li>
+								<li><a href="index2.html">Home 02</a></li>						
+							</ul>
+						</li>	
+						<li><a href="about.html">About</a></li>						
+						<li><a href="#">Course</a>
+							<ul class="sub-menu">										
+								<li><a href="course.html">Course</a></li>
+								<li><a href="course_details.html">Course Deails</a></li>									
+							</ul>
+						</li>
+						<li><a href="#">Pages</a>
+							<ul class="sub-menu">									
+								<li><a href="instructor.html">Instructor</a></li>
+								<li><a href="ins_details.html">Instructor Details</a></li>
+								<li><a href="pricing.html">Pricing Plan</a></li>
+								<li><a href="faq.html">Faq Page</a></li>			
+								<li><a href="404.html">404</a></li>							
+							</ul>
+						</li>			
+						<li><a href="blog.html">Blog</a>
+							<ul class="sub-menu">										
+								<li><a href="blog.html">Blog</a></li>
+								<li><a href="blog_single.html">Blog Details</a></li>
+							</ul>
+						</li>						
+						<li><a href="contact.html">Contact</a></li>
+					</ul>			
+				</div><!--- END ROW -->
+			</div><!--- END CONTAINER -->
+		</div>
+		<!-- END NAVBAR -->
+
+<div class="sidebar">
+  <a href="mfhome.html"><h3>MS Office</h3></a>
+  <p>ພື້ນຖານໂປຣແກຣມ Office</p>
+
+  <div class="sb-item">
+    <div class="sb-row" onclick="toggle(this)">
+      <a class="sb-label" href="word.html" onclick="event.stopPropagation()">Word</a>
+      <span class="sb-arrow">▼</span>
+    </div>
+    <div class="sb-sub">
+      <a href="lword.html">ບົດຮຽນ Word</a>
+      <a href="#">ການຕັ້ງຄ່າ</a>
+    </div>
+  </div>
+
+  <div class="sb-item">
+    <div class="sb-row" onclick="toggle(this)">
+      <a class="sb-label" href="#" onclick="event.stopPropagation()">Excel</a>
+      <span class="sb-arrow">▼</span>
+    </div>
+    <div class="sb-sub">
+      <a href="#">ບົດຮຽນ Excel</a>
+      <a href="#">ການຕັ້ງຄ່າ</a>
+    </div>
+  </div>
+
+  <div class="sb-item">
+    <div class="sb-row" onclick="toggle(this)">
+      <a class="sb-label" href="#" onclick="event.stopPropagation()">PowerPoint</a>
+      <span class="sb-arrow">▼</span>
+    </div>
+    <div class="sb-sub">
+      <a href="#">ບົດຮຽນ PowerPoint</a>
+      <a href="#">ການຕັ້ງຄ່າ</a>
+    </div>
+  </div>
+
+  <div class="sb-item">
+    <div class="sb-row" onclick="toggle(this)">
+      <a class="sb-label" href="#" onclick="event.stopPropagation()">Publisher</a>
+      <span class="sb-arrow">▼</span>
+    </div>
+    <div class="sb-sub">
+      <a href="#">ບົດຮຽນ Publisher</a>
+      <a href="#">ການຕັ້ງຄ່າ</a>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+    <div class="container">
+        <div class="mb-3 mt-3">
+			<h1>ບົບຮຽນທົ່ວໄປກຽວກັບ Microsoft Word</h1>
+		</div>
+		<div class="">
+			<p>ຈະເປັນການບອກກຽວກັບ ພື້ນຖານຕ່າງໆຂອງ word ເຊັ້ນເມນູຕ່າງໆ ແລະ ການໃຊ້ໂດຍພື້ນຖານ ເພື້ອໃຫ້ທຸກຄົນສາມາດນຳໃຫ້ ແລະ ຕໍ່ຍ່ອດໃນສ່ວນຕ່າງໆໄດ້</p>
+		</div> 
+		<hr class="mt-5 mb-5">
+		<div class="" >
+			<h2>ເມນູຕ່າງໆໃນ Microsoft Word</h2>
+		</div>
+        <div class="mt-3">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4 class="text-black ms-5 mt-3">ຈະມີຢູ່ 3 ພາກສ່ວນຫຼັກໆຄື:</h4>
+                    <ul style="list-style: circle;" class="ms-5 mt-3"> 
+                        <li class="ms-5 mt-3">
+                            <p>ພາກສ່ວນ title bar: <br>ຈະເປັນພາກສ່ວນທີ່ມີການຢູ່ກາງໃນ ແຖວ ເມນູດ້ານເທິງທີ່ຈະບອກຊື່ໄຟລ ນາມສະກຸນ ແລະ ພື້ນທີ່ເກັບວ່າເກັບຢູ່ໃສ່</p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>ພາກສ່ວນ Tool bar: <br>ຈະເປັນພາກສ່ວນທີ່ຢູ່ແຖວດຽວກັບ title bar ແຕ່ຈະຢູ່ທາງດ້ານຂວາ ຈະມີອຸປະກອນຕ່າງໆໃຫ້ໃຊ້ເຊັ່ນ: save , undo , redo , new file ເປັນຕົ້ນ ແລະ ເຮົາສາມາດປັບແຕ່ງເພີ່ມເຕີມໄດ້</p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>ພາກສ່ວນ Menu bar ຫຼື : Ribbon bar<br>ຈະເປັນພາກສ່ວນທີ່ຢູ່ໃນຈະມີ ເມນູເຄື່ອງເມື່ອຕ່າງໆຢູ່ຫຼາຍໆຢ່າງເຊັ້ນ: Home , Insert , Design , layout ແລະ ອື່ນໆທີ່ສາມາດເອົາອອກ ຫຼື ເພີ່ມເຂົ້າໄດ້ອິກ</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="imgbyme/wbar.png" alt="" style="width: 500px; margin-top: 100px;">
+                </div>
+            </div>
+            <div class="mt-5">
+                <h2>ຄວາມຮູ້ພື້ນຖານກຽວກັບສີ່ງທີ່ເຄື່ອງມື່ຕ່າງໆ ໃນ menu bar ສາມາດເຮັດໄດ້ ຫຼື ມີໜ້າທີຫຍັງ</h2>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-lg-6">
+                    <h4 class="text-black ms-5">File</h4>
+                    <p class="ms-5 mt-3">ໜ້າທີ່ຫຼັກໆຂອງ File ຈະມີດັ້່ງນີ້: </p>
+                    <ul style="list-style: circle;" class="ms-5 mt-3">
+                        <li class="ms-5 mt-3">
+                            <p>New ເພີ່ມເອກະສານໃໝ່</p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>Open ເປິດເອກະສານເກົ່າ</p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>Save, Save as ບັນທຶກເອກະສານ</p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>Print ພີມເອກະສານອອກມາທາງເຄື່ອງປິ້ນ</p>
+                        </li>
+                    </ul>
+                    <h4 class="text-black ms-5 mt-5">Home</h4>
+                    <p class="ms-5 mt-3">ໜ້າທີ່ຫຼັກໆຂອງ Home ຈະມີດັ້່ງນີ້: </p>
+                    <ul style="list-style: circle;" class="ms-5 mt-3">
+                        <li class="ms-5 mt-3">
+                            <p>ປ່ຽນຟອນ, ປ່ຽນຂະໜາດຟອນ, ປຽນສີຟອນ, ປັບຕໍາແໜ່ງ (ຊ້າຍ,ກາງ, ຂວາ, ສອງຂ້າງ) </p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>ທໍາລາຍການ (Bullets, Numbering) </p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>ເລືອກ Style haeding ຕ່າງໆ</p>
+                        </li>
+                    </ul>
+                    <h4 class="text-black ms-5 mt-5">Insert</h4>
+                    <p class="ms-5 mt-3">ໜ້າທີ່ຫຼັກໆຂອງ Insert ຈະມີດັ້່ງນີ້: </p>
+                    <ul style="list-style: circle;" class="ms-5 mt-3">
+                        <li class="ms-5 mt-3">
+                            <p>	ແຊກຮູບ (picture)</p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>	ແຊກຕາຕະລາງ (Table)</p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>	ເພີ່ມ Header, footer </p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>	ແຊກຮູບຮ່າງ Shapes  </p>
+                        </li>
+                    </ul>
+                    <h4 class="text-black ms-5 mt-5">Design</h4>
+                    <p class="ms-5 mt-3">ໜ້າທີ່ຫຼັກໆຂອງ Design ຈະມີດັ້່ງນີ້: </p>
+                    <ul style="list-style: circle;" class="ms-5 mt-3">
+                        <li class="ms-5 mt-3">
+                            <p>
+                                	ປ່ຽນຮູບແບບເອກະສານ Themes 
+                            </p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>
+                                	ປ່ຽນພຶ້ນຫຼັງ, ຂອບໜ້າ
+                            </p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>
+                                ການໃຊ້ ລາຍນໍ້າ ຫຼື water mark ຕ່າງໆ
+                            </p>
+                        </li>
+                    </ul>
+                    <h4 class="text-black ms-5 mt-5">Layout</h4>
+                    <p class="ms-5 mt-3">ໜ້າທີ່ຫຼັກໆຂອງ Layout ຈະມີດັ້່ງນີ້: </p>
+                    <ul style="list-style: circle;" class="ms-5 mt-3">
+                        <li class="ms-5 mt-3">
+                            <p>ປ່ຽນຂອບໜ້າ (Margins) </p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>	ປ່ຽນເປັນລວງຕັ້ງ, ລວງນອນ (Portrait / Landscape)</p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>	ແບ່ງເປັນຖັນ Column</p>
+                        </li>
+                    </ul>
+                    <h4 class="text-black ms-5 mt-5">References</h4>
+                    <p class="ms-5 mt-3">ໜ້າທີ່ຫຼັກໆຂອງ References ຈະມີດັ້່ງນີ້: </p>
+                    <ul style="list-style: circle;" class="ms-5 mt-3">
+                        <li class="ms-5 mt-3">
+                            <p>	ສ້າງສາລະບັນ (Table of content)</p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>	ເພີ່ມ footnote </p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>	ການອ້າງອິງ (Citations)</p>
+                        </li>
+                    </ul>
+                    <h4 class="text-black ms-5 mt-5">Mailings</h4>
+                    <p class="ms-5 mt-3">ໜ້າທີ່ຫຼັກໆຂອງ Mailings ຈະມີດັ້່ງນີ້: </p>
+                    <ul style="list-style: circle;" class="ms-5 mt-3">
+                        <li class="ms-5 mt-3">
+                            <p>	ສ້າງຈົດໝາຍອັດຕະໂນມັດ (Mail merge) </p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>	ຊ່ອງຈົດໝາຍ (Envelops)</p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>	ປ້າຍຊື່ (Labels)</p>
+                        </li>
+                    </ul>
+                    <h4 class="text-black ms-5 mt-5">Review</h4>
+                    <p class="ms-5 mt-3">ໜ້າທີ່ຫຼັກໆຂອງ Review ຈະມີດັ້່ງນີ້: </p>
+                    <ul style="list-style: circle;" class="ms-5 mt-3">
+                        <li class="ms-5 mt-3">
+                            <p>	ກວດຄຶນຄຳຜິດ (Spelling & grammar) </p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>	ເພີ່ມ Comment </p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>	Track changes ກວດຄຶນການແກ້ໄຂ</p>
+                        </li>
+                    </ul>
+                    <h4 class="text-black ms-5 mt-5">view</h4>
+                    <p class="ms-5 mt-3">ໜ້າທີ່ຫຼັກໆຂອງ view ຈະມີດັ້່ງນີ້: </p>
+                    <ul style="list-style: circle;" class="ms-5 mt-3">
+                        <li class="ms-5 mt-3">
+                            <p>	ປຽນຮູບແບບການເບິງເອກະສານ (Print layout, Web layout)</p>
+                        </li>
+                        <li class="ms-5 mt-3">
+                            <p>	ປິດ, ເປິດ ruler, Gridlines, Navigation Pane </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="imgbyme/wfile.png" alt="" style="width: 500px;">
+                    <img src="imgbyme/whome.png" alt="" style="width: 500px; margin-top: 150px;">
+                    <img src="imgbyme/winsert.png" alt="" style="width: 500px; margin-top: 200px;">
+                    <img src="imgbyme/wDesign.png" alt="" style="width: 500px; margin-top: 230px;">
+                    <img src="imgbyme/wLayout.png" alt="" style="width: 500px; margin-top: 210px;">
+                    <img src="imgbyme/wReferences.png" alt="" style="width: 500px; margin-top: 210px;">
+                    <img src="imgbyme/wMailings.png" alt="" style="width: 500px; margin-top: 210px;">
+                    <img src="imgbyme/wReview.png" alt="" style="width: 500px; margin-top: 210px;">
+                    <img src="imgbyme/wview.png" alt="" style="width: 500px; margin-top: 210px;">
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <h2>ສະຫຼຸບລວມສີງທີ່ Microsoft word ສາມາດເຮັດໄດ້</h2>
+            <p>ສີ່ງທີ່ microsoft word ສາມາດເຮັດໄດ້ນັ້ນມີຫຼາຍໆຢ່າງ ແຕ່ຖ້າໃຫ້ເຮົາສະຫຼຸບມາຈະໄດ້ດັ້ງນີ້: </ຍ>
+        </div>
+        <div>
+            <ul style="list-style: circle; line-height: 30px;" class="mt-5 ms-5">
+                <li>
+                    <p>	ສາມາດລົບ, ຍົກຍ້າຍ, ສໍາເນົາ ຂໍ້ຄວາມໄດ້</p>
+                </li>
+                <li>
+                    <p>		ສາມາດຂຽນຕົວໜັງສືໜາ, ເນີ້ງໄດ້</p>
+                </li>
+                <li>
+                    <p>	ສາມາດປັບຂະໜາດຕົວໜັງສຶໄດ້</p>
+                </li>
+                <li>
+                    <p>	ສາມາດແກ້ໄຂເອກະສານໄດ້</p>
+                </li>
+                <li>
+                    <p>	ສາມາດຂຽນຕົວໜັງສືປະເພດຕ່າງໆໄດ້</p>
+                </li>
+                <li>
+                    <p>ສາມາດໃສ່ຮູບໃນເອກກະສານໄດ້</p>
+                </li>
+                <li>
+                    <p>ສາມາດສ້າງຕາຕະລາງໄດ້</p>
+                </li>
+                <li>
+                    <p>ສາມາດກວດຄຶນຄຳຜິດ ແລະ ແກ້ໄຂໄດ້</p>
+                </li>
+            </ul>
+        </div>
+		<section id="shout"></section>
+		<hr class="mt-5 mb-5">
+		<div class="">
+			<h1 class="mb-1">ພາກສ່ວນແນະນຳ</h1>
+			<p>ຈະເປັນຄຳແນະນຳ ແລະ ບົບຮຽນເພີ່ມເຕີມ</p>
+		</div>
+        <div class="mt-5">
+            <h2>ຄວນຮຽນໃຊ້ໃຫ້ຄ່ອງແຄ້ວ ແລະ ຖະໜັດ</h2>
+            <p class="mt-3">ເພາະ microsoft word ນັ້ນເປັນທີ່ນຳໃຊ້ຫຼາຍສຳຫຼັບໂປຣແກຣມ ເຮັດເອກະສານ ຫຼື ຂຽນເອກະສານ ແລ້ວຖ້າເກັ່ງໃນການຂຽນເອກະສານຕ່າງໆຈະຊ່ວຍໃນການຮຽນ ແລະ ການເຮັດວຽກຂອງເຮົາໄດ້ຫຼາຍ</ຍ>
+        </div>
+		<div class="nav-btn">
+			<a href="word.html" class="back">back</a>
+			<a href="settingword.htm" class="next">Next</a>
+		</div>
+		
+	</div>
+</div>
+
+    <!-- START FOOTER -->
+		<div class="footer section-padding">
+			<div class="container">				
+				<div class="row">						
+					<div class="col-lg-3 col-sm-6 col-xs-12">
+						<div class="single_footer">
+							<a href="../eduleb/eduleb/index.html"><img src="../eduleb/eduleb/assets/img/logo.png" alt="" style="width: 300px;"></a>         
+							<!-- <p>ເວັບນີ້ສ້າງຂື້ນມາເພື່ອແນະນຳການຮຽນການສອນ ແລະ ບອກເລົ່າປະສົບການຕ່າງໆ ຕອນ ປີ 1 ຢູ່ BCT (25-26) </p> -->
+						</div>			
+					</div><!--- END COL -->						
+					<div class="col-lg-2 col-sm-6 col-xs-12">
+						<div class="single_footer">
+							<h4>About</h4>
+							<ul>
+								<li><a href="../../Edukate-1.0.0/index.html">About me</a></li>
+								<li><a href="../../restoran-1.0.0/restoran-1.0.0/index.html">About college BCT</a></li>
+								<li><a href="../../learner-1.0.0/learner-1.0.0/index.html">Contact</a></li>
+							</ul>
+						</div>
+					</div><!--- END COL -->	
+					<div class="col-lg-2 col-sm-6 col-xs-12">
+						<div class="single_footer">
+							<h4>Popular subject</h4>
+							<ul>
+								<li><a href="#">Vs Code</a></li>
+								<li><a href="#">Short cut</a></li>
+								<li><a href="#">Information website</a></li>
+								<li><a href="#">Program</a></li>
+								<!-- <li><a href="#">Code Inspection</a></li>						 -->
+								<!-- <li><a href="#">Digital Marketing</a></li>						 -->
+							</ul>
+						</div>
+					</div><!--- END COL -->
+					<div class="col-lg-3 col-sm-6 col-xs-12">
+						<div class="single_footer">
+							<h4>Contact Me</h4>
+							<!-- <div class="sf_contact">
+								<span class="ti-map"></span>
+								<p>2570 Quadra Street Victoria Road, New York, Canada</p>
+							</div> -->
+							<div class="sf_contact">
+								<span class="ti-mobile"></span>
+								<p>+856 20 99 651 572</p>
+							</div>
+							<div class="sf_contact">
+								<span class="ti-mobile"></span>
+								<p><a href="https://wa.me/8562099651572" target="_blank">Whatsapp</a></p>
+							</div>
+							<div class="sf_contact">
+								<span class="ti-email"></span>
+								<p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=masomiimiisoba@gmail.com" target="_blank">My Email</a></p>
+							</div>
+						</div>
+					</div><!--- END COL -->						
+					<div class="col-lg-2 col-sm-6 col-xs-12">
+						<div class="single_footer">
+							<h4>Contact BCT</h4>
+							<div class="sf_contact">
+								<span class="ti-map"></span>
+								<p>ບ້ານ ໂນນສະຫວ່າງ ເມືອງ ວຽງຄຳ ແຂວງ ວຽງຈັນ</p>
+							</div>
+							<!-- <div class="sf_contact">
+								<span class="ti-mobile"></span>
+								<p>Phone</p>
+							</div> -->
+							<div class="sf_contact">
+								<span class="ti-mobile"></span>
+								<p><a href="https://wa.me/8562091215399" target="_blank">Whatsapp</a></p>
+							</div>
+						</div>
+					</div><!--- END COL -->	
+				</div><!--- END ROW -->					
+			</div><!--- END CONTAINER -->
+		</div>
+		<!-- END FOOTER -->
+
+<script>
+    function toggle(row){
+  const sub = row.nextElementSibling;
+  const arrow = row.querySelector('.sb-arrow');
+  const isOpen = sub.classList.contains('show');
+  sub.classList.toggle('show', !isOpen);
+  arrow.classList.toggle('open', !isOpen);
+}
+</script>
+
+</body>
+</html>
+
